@@ -1,0 +1,68 @@
+
+// HUOM. koodia käytetty videosta "Multiple Choice Quiz using HTML,CSS and JavaScript." - Coding Destination. (https://www.youtube.com/watch?v=H1DUszPZakQ&list=PLD8OYCVw7dl8V48GdYeFqzQftN-LR7yAE&index=1&t=1078s)
+
+
+
+// Määritellään muuttujat eri tuloksille
+
+var t= "Vastaus on oikein" ;
+var f= "Vastaus on väärin. Oikea vastaus on " ;
+
+
+
+
+let answer1 = document.getElementById("answer1") ;
+let answer2 = document.getElementById("answer2") ;
+let answer3 = document.getElementById("answer3") ;
+let answer4 = document.getElementById("answer4") ;
+let answer5 = document.getElementById("answer5") ;
+
+
+let tulokset = document.getElementById("results") ;
+
+
+// Sitten funktio.
+
+function check() {
+
+
+// Luodaan muuttuja, joka laskee oikein menneet vastaukset.
+
+var c=0 ;
+
+
+// Näillä muuttujilla selvitetään, minkä vastausen kokeenteijä on antanut.
+
+var q1 = document.quiz.q1.value ;
+var q2 = document.quiz.q2.value ;
+var q3 = document.quiz.q3.value ;
+var q4 = document.quiz.q4.value ;
+var q5 = document.quiz.q5.value ;
+
+
+// Tarkistetaan vastaukset. Jos oikein -> tulostetaan oikein-viesti ja kasvatetaan c-muuttujan arvoa yhdellä. Jos väärin -> Tulostetaan väärin-viesti ja ilmoitetaan käyttäjälle oikea vastausvaihtoehto.
+
+if (q1=="leijona") {{c++}  (answer1.innerHTML = t)} 
+else {answer1.innerHTML = f + "B = Leijona." ; }
+
+if (q2=="kirahvi") {{c++}  (answer2.innerHTML = t)} 
+else {answer2.innerHTML = f + "C = Kirahvi." ; }
+
+if (q3=="liito-orava") {{c++}  (answer3.innerHTML = t)} 
+else {answer3.innerHTML = f + "B = Liito-orava." ; }
+
+if (q4=="valas") {{c++}  (answer4.innerHTML = t)} 
+else {answer4.innerHTML = f + "C = Valas." ; }
+
+if (q5=="jotta") {{c++}  (answer5.innerHTML = t)} 
+else {answer5.innerHTML = f + "A = Jotta ne eivät ajelehtisi pois toistensa luota." ; }
+
+
+// Lopuksi tulostetaan sivun yläreunaan oikeiden vastausten määrä.
+
+results.innerHTML = ("Oikeita vastauksia: " + c + "/5") ;
+
+
+}
+
+
